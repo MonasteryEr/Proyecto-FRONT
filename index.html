@@ -3,35 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Talento Tech Pre-entrega</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/
+all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <title>Todo lo que buscas</title>
 </head>
 <body>
     <!-- Header -->
     <header class = "header">
-        <a href="index.html"> 
-            <img src="img/logo.png" alt="Talento Tech Logo" class="logo" width="40px" height="40px">
-        </a>
-        <div>
-            <ul id="navbar" classs="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/tienda.html">Tienda</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Acerca de</a></li>
-                <li><a href="pages/contacto.html">Contacto</a></li>
-                <li>
-                    <a href="pages/carrito.html">Carrito</a>
-                </li>
-            </ul>
+        <div class="logo-container">
+            <div class="spacer"></div>
+            <a href="index.html"> 
+                <img src="img/logo.png" alt="Todo lo que buscas" class="logo">
+            </a>
+            <div class="session-links">
+                <a href="#"> <i class="fa-solid fa-user"></i>Inciar sesión</a>
+                <a href="#"> <i class="fa-solid fa-user-plus"></i>Registrarse</a>
+            </div>
+        </div>
+        
+
+        <div class="nav-links">
+            <div class="link">
+                <a href="index.html">Pagina principal</a>
+            </div>
+            <div class="link">
+                <a href="tienda.html">Tienda</a>
+            </div>
+            <div class="link">
+                <a href="acerca-de.html">Acerca de</a>
+            </div>
+            <div class="link">
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="link">
+                <a href="carrito.html">Carrito</a>
+            </div>
         </div>
 
+        
     </header>
 
-    <main>
-        <section class="banner">
-            <h4>Ofertas que no te podes perder</h4>
-            <h2>Hasta <span>70% OFF</span> - Electronica, Moda y Más</h2>
-            <button>Ver más</button>
+    <hero class="hero">
+        <section class="hero-content">
+            <h1>Bienvenido a nuestra tienda en línea</h1>
+            <p>Explora nuestra amplia gama de productos y encuentra lo que necesitas.</p>
+            <a href="tienda.html" class="btn">Ir a la tienda</a>    
         </section>
-    </main>
+    </hero>
+
 </body>
