@@ -11,18 +11,22 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Fira Sans', sans-serif;
-    background-color: #eceff1;
+    background-color: #FFF2F6;
 }
 
 .header{
-    background-color: #fff;
+    background-color: #FFF2F6;
     display: flex;
     align-items: center;
     flex-direction: column;
     height: 120px;
-    border-bottom-left-radius: 1%;
-    border-bottom-right-radius: 1%;
     padding: 2 1%;
+    border-radius: 5px;
+    width: 100%;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    
 }
 
 .logo-container{
@@ -43,14 +47,19 @@ body{
 .logo-container .logo{
     height: 80px;
     width: auto;
-    background-color: #fff;
+    background-color: #ffffff;
     transition: all 0.5s;
     border-radius: 50%;
 }
 
-.spacer,
+.spacer{
+    flex :1;
+    text-align: center;
+    color: #333C4D;
+}
 .logo-container .session-links {
     flex: 1; 
+    
 }
 
 .logo-container .logo:hover{
@@ -61,7 +70,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: end;
+    justify-content: center;
     width: 100%;
     height: 100%;
     padding: 10px;
@@ -92,7 +101,7 @@ body{
     align-items: center;
     /* border: #333C4D 1px solid; */
     justify-content: space-around;
-    background-color: #b3b6d5;
+    background-color: #FFDFE9;
 }
 .header .nav-links .link a{
     display: inline-block;
@@ -104,14 +113,16 @@ body{
 
 .header .nav-links .link a:hover{
     transform: scale(1.1);
-    color: #eceff1;
+    color: #9CF1FD;
 }
 
 .hero{
+    margin-top: auto;
     width: 100%;
-    height: 300px;
+    height: 400px;
     background-image: url('img/hero.png');
     background-size: cover;
+    background-position: 0%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,14 +133,14 @@ body{
 }
 
 .hero h1{
-    color: #fff;
+    color: #333C4D;
     font-size: 40px;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .hero p{
-    color: #fff;
+    color: #333C4D;
     font-size: 20px;
     text-align: center;
     margin-bottom: 20px;
@@ -137,15 +148,74 @@ body{
 
 .hero .btn{
     display: inline-block;
-    background-color: #eceff1;
+    background-color: #FFDFE9;
     color: #333C4D;
     text-decoration: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 15px;
     transition: all 0.5s;
 }
 
 .hero .btn:hover{
     transform: scale(1.1);
-    background-color: #fff;
+    background-color: #FFF2F6;
+}
+
+/*cartilla de productos*/
+
+.cartilla{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 5px; */
+    height: 800px;
+    width:100%;
+}
+
+.cartilla h2{
+    color: #333C4D;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: #FFDFE9;
+    width: 100%;
+}
+.cartilla .contenedor-productos{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+.cartilla .contenedor-productos .producto{
+    width: 23%;
+    min-width: 100px;
+    margin: 15px 0;
+    padding: 10px 12px;
+    border-radius: 20px;
+    background-color: #FFDFE9;
+    cursor: pointer;
+    transition: 0.8s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+}
+
+.cartilla .contenedor-productos .producto:hover{
+    transform: scale(1.05);
+    box-shadow: #ffdfe95e ;
+}
+
+.cartilla .contenedor-productos .producto h5{
+    color: #333C4D;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.cartilla .contenedor-productos .producto img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 5%;
 }
