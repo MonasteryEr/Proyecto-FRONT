@@ -26,7 +26,7 @@ body{
     position: sticky;
     z-index: 1000;
     top: 0;
-    
+    border-bottom: #333c4daf 1px solid;
 }
 
 .logo-container{
@@ -91,6 +91,7 @@ body{
 .header .link{
     margin: 0 10px;
     text-align: center;
+    width: 150px;
 }
 .header .nav-links{
     width: 100%;
@@ -202,7 +203,7 @@ body{
 }
 
 .cartilla .contenedor-productos .producto:hover{
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: #ffdfe95e ;
 }
 
@@ -211,6 +212,13 @@ body{
     font-size: 20px;
     text-align: center;
     margin-bottom: 20px;
+    padding: 5px;
+}
+
+.cartilla .contenedor-productos .producto h4{
+    color: #333C4D;
+    font-size: 16px;
+    text-align: start;
 }
 .cartilla .contenedor-productos .producto img{
     width: 100%;
