@@ -25,7 +25,8 @@ body{
     width: 100%;
     position: sticky;
     z-index: 1000;
-    top: 0;border-bottom: #FFF2F6 1px solid;
+    top: 0;
+    border-bottom: #FFF2F6 1px solid;
 }
 
 .logo-container{
@@ -153,6 +154,7 @@ body{
     padding: 10px 20px;
     border-radius: 15px;
     transition: all 0.5s;
+    text-align: center;
 }
 
 .hero .btn:hover{
@@ -302,7 +304,8 @@ body{
 
 .footer-container{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
+    
 }
 
 .footer-container .contacto{
@@ -344,7 +347,6 @@ body{
     font-size: 11px;
     transition: all 0.5s;
     margin-bottom: 20px;
-    transition: all 0.5s;
 }
 
 .footer-container .redes{
@@ -353,7 +355,93 @@ body{
     text-decoration: none;
 }
 
-.footer-container .redes a:hover{
-    transform: scale(1.02);
-    background-color: #FFF2F6;
+
+/*boton hamburguesa*/
+
+.menu-toggle{
+    display: none;
 }
+
+.hamburger-btn{
+    display: none;
+    color: #333C4D;
+    font-size: 26px;
+    align-self: start;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .cartilla .contenedor-productos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hamburger-btn{
+        display: block;
+    }
+
+    .header.nav-links{
+        position: fixed;
+        display: grid;
+        grid-template-rows: repeat(5, 1fr), 100px;
+        top: 0;
+        left: -100%;
+        width: auto;
+        height: 100vh;
+        background-color: #FFDFE9;
+        align-items: center;
+        justify-content: none;
+        gap: 0;
+        overflow: hidden;
+        transition: left 0.4s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .nav-links .link{
+        width: 100%;
+        text-align: center;
+        padding: 15px 25px;
+    }
+
+    .logo-container .nav-links .link a {
+        font-size: 18px;
+    }
+
+    .menu-toggle:checked ~ .nav-links{
+        left: 0;
+    }
+
+}
+
+@media (max-width: 528px) {
+    .cartilla .contenedor-productos{
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container{
+        grid-template-columns: 1fr;
+    }
+
+    .hero{
+        height: 200px;
+    }
+
+    .hero-content{
+        text-align: left;
+    }
+    .hero-content h1{
+        font-size: 30px;
+        text-align: left;
+        margin-bottom: 0px;
+    }
+    .hero-content p{
+        text-align: left;
+    }
+
+
+}
+
+
