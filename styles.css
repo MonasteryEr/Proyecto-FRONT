@@ -58,7 +58,6 @@ body{
 }
 .logo-container .session-links {
     flex: 1; 
-    
 }
 
 .logo-container .logo:hover{
@@ -168,7 +167,7 @@ body{
     flex-direction: column;
     align-items: center;
     /* padding: 5px; */
-    height: 800px;
+    height: auto;
     width:100%;
 }
 
@@ -182,14 +181,16 @@ body{
     width: 100%;
 }
 .cartilla .contenedor-productos{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: repeat(2 ,1fr); */
+    gap: 24px;
     justify-content: space-between;
     padding-top: 20px;
-    flex-wrap: wrap;
 }
 .cartilla .contenedor-productos .producto{
-    width: 23%;
-    min-width: 100px;
+    /* width: 23%;
+    min-width: 100px; */
     margin: 15px 0;
     padding: 10px 12px;
     border-radius: 20px;
@@ -203,7 +204,7 @@ body{
 
 .cartilla .contenedor-productos .producto:hover{
     transform: scale(1.05);
-    box-shadow: #ffdfe95e ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .cartilla .contenedor-productos .producto h5{
@@ -221,20 +222,138 @@ body{
 }
 .cartilla .contenedor-productos .producto img{
     width: 100%;
-    height: auto;
+    height: 80%;
     object-fit: cover;
     display: block;
     border-radius: 5%;
 }
 
+
 /* Banner */
 .banner{
     width: 100%;
-    height: 300px;
+    height: 400px;
     background-image: url('img/banner.png');
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+.banner h2{
+    color: #333C4D;
+    font-size: 40px;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.banner p{
+    color: #333C4D;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.banner a{
+    display: inline-block;
+    background-color: #FFDFE9;
+    color: #333C4D;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.banner a:hover{
+    transform: scale(1.1);
+    background-color: #FFF2F6;
+}
+/*boton whatsapp*/
+
+.btn-wsp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #25d366;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 35px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btn-wsp:hover {
+    background-color: #20ba5a;
+    transform: scale(1.1);
+    color: #ffffff;
+}
+/*Footer*/
+
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.footer-container .contacto{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-container h2{
+    color: #333C4D;
+    font-size: 20px;
+    text-align: start;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #FFDFE9;
+}
+
+.footer-container h3{
+    color: #333c4d;
+    font-size: 10px;
+    text-align: start;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.footer-container span{
+   color: #333c4dcb;
+    font-size: 11px;
+    text-align: start;
+    width: 100%;
+    margin-bottom: 20px; 
+}
+
+.footer-container .redes a{
+    display: inline-block;
+    text-decoration: none;
+    color: #333C4D;
+    font-size: 11px;
+    transition: all 0.5s;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+}
+
+.footer-container .redes{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.footer-container .redes a:hover{
+    transform: scale(1.02);
+    background-color: #FFF2F6;
 }
