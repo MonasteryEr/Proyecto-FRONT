@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 20px;
+    text-decoration: none;  
+}
+
+.logo-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF2F6;
+}
+
+.logo-container .logo{
+    height: 80px;
+    width: auto;
+    background-color: #ffffff;
+    transition: all 0.5s;
+    border-radius: 50%;
+}
+
+.logo-container .logo:hover{
+    transform: scale(1.1);
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-image: url('../img/hero.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7, auto);
+    width: 80vh;
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #FFF2F6;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    color: #333C4D;
+}
+
+.form .titulo{
+    grid-column: 1 / -1;
+    margin-bottom: 15px;
+}
+
+.form .titulo h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.form .titulo p{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.form .nombre{
+    grid-column: 1 / -1;
+    margin-bottom: 10px;
+}
+
+.form .correo{
+    grid-column: 1 / -1;
+    margin-bottom: 10px;
+}
+
+.form .chapta{
+    grid-column: 1 / -1;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.form .boton{
+    grid-column: 1 / -1;
+    margin: 10px;
+    width: 97%;
+    background-color: #FFDFE9;
+    color: #333C4D;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.form .boton:hover{
+    transform: scale(1.01);
+    background-color: #FFF2F6;
+}
+
+.form input{
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.form .chapta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333C4D;
+}
+
+.form .chapta input{
+    margin-right: 10px;
+    width: 40px;
+}
+
+.cuenta-existente{
+    grid-column: 1 / -1;
+    background-color: #FFF2F6;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333C4D;
+}
